@@ -3,5 +3,9 @@ angular.module('scheduleApp', ['firebase'])
 
 // create our main controller and get access to firebase
 .controller('mainController', function($scope, $firebase){
-  // out application code will go here
+
+  // connect to firebase
+  var ref = new Firebase("https://scheduled-app.firebaseio.com/days");
+  var fb = $firebase(ref);
+
 });
